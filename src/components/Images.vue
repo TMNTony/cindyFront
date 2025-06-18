@@ -10,7 +10,7 @@
           :data-src="imageUrl(photo.pictureURL)"
           :data-sub-html=photo.caption
       >
-        <img class="img-responsive custom-image" :src="'src/assets/img/' + photo.pictureURL" :alt="photo.caption" />
+        <img class="img-responsive custom-image" :src="imageUrl(photo.pictureURL)" :alt="photo.caption" />
       </a>
   </LightGallery>
 </template>
