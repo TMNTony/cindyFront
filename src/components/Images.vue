@@ -7,7 +7,7 @@
       <a v-for="photo in gallery"
          data-lg-size="1406-1390"
           class="gallery-item"
-          :data-src="imageUrl(gallery.pictureURL)"
+          :data-src="imageUrl(photo.pictureURL)"
           :data-sub-html=photo.caption
       >
         <img class="img-responsive custom-image" :src="'src/assets/img/' + photo.pictureURL" :alt="photo.caption" />
