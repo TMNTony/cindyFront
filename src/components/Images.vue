@@ -45,6 +45,7 @@ export default {
     },
     getPhotos() {
       this.gallery = this.$store.getters.getImages;
+      console.log(this.gallery)
     },
   },
   mounted() {
