@@ -7,7 +7,7 @@
       <a v-for="photo in gallery"
          data-lg-size="1406-1390"
           class="gallery-item"
-          :data-src="'src/assets/img/' + photo.pictureURL"
+          :data-src="imageUrl(gallery.pictureURL)"
           :data-sub-html=photo.caption
       >
         <img class="img-responsive custom-image" :src="'src/assets/img/' + photo.pictureURL" :alt="photo.caption" />
@@ -46,6 +46,9 @@ export default {
     getPhotos() {
       this.gallery = this.$store.getters.getImages;
       console.log(this.gallery)
+    },
+    imageUrl(imagePath) {
+      return new URL(`/src/assets/img/${imagePath}`, import.meta.url)
     },
   },
   mounted() {
