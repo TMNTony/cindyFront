@@ -44,7 +44,6 @@ export default {
       lightGallery = detail.instance
     },
     getPhotos() {
-      this.gallery = this.$store.getters.getImages;
       console.log(this.gallery)
     },
     imageUrl(imagePath) {
